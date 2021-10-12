@@ -1,0 +1,21 @@
+﻿@model MVCStokTakibi.Models.Entity.TBL_MUSTERILER
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<form>
+    <div>
+        <label style="margin-top:15px">MÜŞTERİ ADI</label>
+        @Html.TextBoxFor(m => m.MUSTERIAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERIAD, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <label style="margin-top:15px">MÜŞTERİ SOYADI</label>
+        @Html.TextBoxFor(m => m.MUSTERISOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MUSTERISOYAD, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <button style="margin-top:15px" class="btn btn-info">YENİ MÜŞTERİ EKLE</button>
+    </div>
+</form>

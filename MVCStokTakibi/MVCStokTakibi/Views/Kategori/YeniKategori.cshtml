@@ -1,0 +1,26 @@
+﻿@model MVCStokTakibi.Models.Entity.TBL_KATEGORILER
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<form method="post" class="form-group">
+    @*<div>
+            <label>KATEGORİ ADI</label>
+            <input style="margin-top:20px;" type="text" class="form-control" name="KATEGORIAD" />
+        </div>*@
+    <div>
+        <label>KATEGORİ AD</label>
+        @Html.TextBoxFor(m => m.KATEGORIAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.KATEGORIAD, "", new { @style = "color:red" })
+    </div>
+    <div>
+        <button style="margin-top:15px; margin-bottom:15px;" class="btn btn-info" id="btn1">Kategori Ekle</button>
+    </div>
+    <script>
+        $('#btn1').click(function () {
+            alert("Kayıt Edildi..!");
+        });
+    </script>
+</form>
+
